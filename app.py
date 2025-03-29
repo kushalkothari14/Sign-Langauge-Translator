@@ -6,7 +6,7 @@ import numpy as np
 app = Flask(__name__)
 
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=['GET', 'POST'])
 def predict():
     file = request.files.get("video")
     if not file:
